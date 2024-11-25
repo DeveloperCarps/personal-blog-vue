@@ -3,9 +3,9 @@ import { RouterLink } from 'vue-router'
 </script>
 <template>
     <nav>
-        <RouterLink to="/blog">My blog</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/me">Just Me</RouterLink>
-        <img src="/logo.png" alt="logo">
+        <img src="/blog-logo.png" alt="logo">
     </nav>
 </template>
 <style scoped>
@@ -13,18 +13,18 @@ import { RouterLink } from 'vue-router'
         display: flex;
         justify-content: start;
         align-items: center;
-        height: 60px;
+        height: 70px;
     }
     a {
         text-decoration: none;
         color: #333;
-        width: 80px;
-        margin-left: 20px;
+        width: auto;
+        margin-right: 20px;
+        font-weight: 300;
     }
     img {
         margin: 0 20px 0 auto;
         width: 70px;
         height: auto;
-        aspect-ratio: 5/3;
     }
 </style>
