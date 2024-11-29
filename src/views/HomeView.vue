@@ -1,8 +1,8 @@
 <style scoped>
     .blogs {
         display: flex;
-        flex-flow: column nowrap;
-        justify-content: baseline;
+        flex-flow: column-reverse nowrap;
+        justify-content: end;
         align-items: center;
     }
     .blog {
@@ -49,12 +49,12 @@
         <span>{{ setup.blogs }}</span>
     </section>
     <section class="blogs">
-        <div class="blog">
-            <template v-for="record in records">
-                <span class="blog-date">{{ returnDate(record.created) }}</span>
-                <RouterLink v-bind:to="returnLink(record.id)" class="blog-title-link">{{ record.title }}</RouterLink>
-            </template>
-        </div>
+        <template v-for="record in records">
+            <div class="blog">
+                    <span class="blog-date">{{ returnDate(record.created) }}</span>
+                    <RouterLink v-bind:to="returnLink(record.id)" class="blog-title-link">{{ record.title }}</RouterLink>
+            </div>
+        </template>
     </section>
 </template>
 <script setup>
